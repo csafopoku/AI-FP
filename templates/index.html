@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tweet Classifier</title>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center; */
+            align-items: center;
+            font-family: Arial, sans-serif;
+            /* background-image: url("/static/images/eemaje.jpg");   */
+            background-image: url("https://home.sophos.com/sites/default/files/2021-09/Cyberbullying.png");  
+            background-repeat: repeat;
+            background-size: 60%;
+            background-position: center center;
+        }
+
+        .label-text {
+            font-size: 24px; /* Increased font size for label */
+            margin-bottom: 20px; /* Space below the label */
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%,50%);
+            color: #13acd3
+        }
+
+        input[type="text"] {
+            width: 60%; /* Adjust width as needed */
+            padding: 10px;
+            border-radius: 4px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,50%);
+            border: 1px solid #ccc;
+            font-size: 16px; /* Adjust font size for input text if needed */
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: #4178BE; /* Two shades darker than previous */
+            color: white; /* White text */
+            padding: 10px 20px;  
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,50%);
+            font-size: 20px; /* Original font size */
+            margin-top: 10px; /* Margin above the button */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #365F91; /* Even darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="label-text">Enter Tweet URL:</div>
+    <form action="/classify" method="post">
+        <input type="text" id="tweet_url" name="tweet_url">
+        <input type="submit" value="Classify">
+    </form>
+</body>
+</html>
